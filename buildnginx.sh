@@ -12,3 +12,4 @@ NX_VERSION=`grep "Version" ./SPECS/nginx.spec | cut -d " " -f 2` && \
 wget --no-verbose http://nginx.org/download/nginx-${NX_VERSION}.tar.gz -P ./SOURCES/ && \
 
 rpmbuild --define "_sourcedir $(pwd)/SOURCES" --define "_builddir $(pwd)/BUILD" -bb $(pwd)/SPECS/nginx.spec
+
